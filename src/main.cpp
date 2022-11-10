@@ -11,7 +11,7 @@ void setup()
     M5.Lcd.setRotation(3);
     M5.Lcd.setTextSize(3);
 
-  Wire.begin(); //Joing I2C bus
+  Wire.begin(0, 26); //Joing I2C bus Wire.begin(0,26) is for the NCIR Hat
   
   if (therm.begin() == false){ // Initialize thermal IR sensor
     // Serial.println("Qwiic IR thermometer did not acknowledge! Freezing!");
@@ -32,9 +32,9 @@ void loop()
     // Use the object() and ambient() functions to grab the object and ambient
 	// temperatures.
 	// They'll be floats, calculated out to the unit you set with setUnit().
-    M5.Lcd.setCursor(2, 30);
+    M5.Lcd.setCursor(20, 30);
     M5.Lcd.print("IR:  " + String(therm.object(), 2));
-    M5.Lcd.setCursor(2, 70);
+    M5.Lcd.setCursor(20, 70);
     M5.Lcd.print("Ref: " + String(therm.ambient(), 2));
   }
   delay(1000);
