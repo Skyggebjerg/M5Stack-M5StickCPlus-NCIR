@@ -217,4 +217,5 @@
  .pio/libdeps/m5stick-c/M5StickCPlus/src/utility/Speaker.h \
  .pio/libdeps/m5stick-c/M5StickCPlus/src/utility/Config.h \
  C:/Users/osk/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-dac.h \
- .pio/libdeps/m5stick-c/M5StickCPlus/src/RTC.h src/SparkFunMLX90614.h
+ .pio/libdeps/m5stick-c/M5StickCPlus/src/RTC.h src/SparkFunMLX90614.h \
+ src/7seg70.h src/7seg20.h
