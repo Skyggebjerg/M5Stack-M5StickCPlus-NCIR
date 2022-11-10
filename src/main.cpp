@@ -9,7 +9,7 @@ void setup()
 {
     M5.begin();
     M5.Lcd.setRotation(3);
-    M5.Lcd.setTextSize(3);
+    M5.Lcd.setTextSize(4);
 
   Wire.begin(0, 26); //Joing I2C bus Wire.begin(0,26) is for the NCIR Hat
   
@@ -32,9 +32,11 @@ void loop()
     // Use the object() and ambient() functions to grab the object and ambient
 	// temperatures.
 	// They'll be floats, calculated out to the unit you set with setUnit().
-    M5.Lcd.setCursor(20, 30);
-    M5.Lcd.print("IR:  " + String(therm.object(), 2));
-    M5.Lcd.setCursor(20, 70);
+    M5.Lcd.setTextSize(4);
+    M5.Lcd.setCursor(40, 30);
+    M5.Lcd.print(String(therm.object(), 1));
+    M5.Lcd.setTextSize(3);
+    M5.Lcd.setCursor(20, 90);
     M5.Lcd.print("Ref: " + String(therm.ambient(), 2));
   }
   delay(1000);
